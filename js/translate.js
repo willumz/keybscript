@@ -34,4 +34,4 @@ function translate()
     out_box.value = sketch;
 }
 
-window.onerror = ErrorHandler.RaiseException;
+//window.onerror = ErrorHandler.RaiseException;
