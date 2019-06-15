@@ -3,9 +3,8 @@ function *parse(tokens)
     var parser = new Parser(new NextVisibleIterator(tokens, true), ";");
     while (parser.tokens.next != null)
     {
-        var p = parser.nextExpression(null);
-        //console.log(p);
-        if (p != null) { yield p; }
+        var parse = parser.nextExpression(null);
+        if (parse != null) { yield parse; }
         parser.tokens.getNext();
     }
 }

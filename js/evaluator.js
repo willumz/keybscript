@@ -278,7 +278,7 @@ class SketchWriter
     pressKey(keys)
     {
         var keyPresses = [];
-        var specialKeys = {"GUI": "KEY_LEFT_GUI", "SHIFT": "KEY_LEFT_SHIFT", "CTRL": "KEY_LEFT_CTRL", "ALT": "KEY_LEFT_ALT", "UPARROW": "KEY_UP_ARROW", "DOWNARROW": "KEY_DOWN_ARROW", "LEFTARROW": "KEY_LEFT_ARROW", "RIGHTARROW": "KEY_RIGHT_ARROW", "ENTER": "KEY_RETURN"};
+        var specialKeys = {"GUI": "KEY_LEFT_GUI", "SHIFT": "KEY_LEFT_SHIFT", "CTRL": "KEY_LEFT_CTRL", "ALT": "KEY_LEFT_ALT", "UPARROW": "KEY_UP_ARROW", "DOWNARROW": "KEY_DOWN_ARROW", "LEFTARROW": "KEY_LEFT_ARROW", "RIGHTARROW": "KEY_RIGHT_ARROW", "ENTER": "KEY_RETURN", "DELETE": "KEY_DELETE"};
         for (var i of keys[1].split(" "))
         {
             if (specialKeys[i.toUpperCase()] != null) keyPresses.push(specialKeys[i.toUpperCase()]);
