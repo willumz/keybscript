@@ -1,3 +1,7 @@
+---
+title: README
+---
+
 # keybscript
 A scripting language for keyboard input which aims to build some complexity upon the simplicity of DuckyScript.
 
