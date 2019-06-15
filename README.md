@@ -1,5 +1,4 @@
 ---
-title: README
 ---
 
 # keybscript
@@ -7,17 +6,17 @@ A scripting language for keyboard input which aims to build some complexity upon
 
 
 ## Contents
-- [Usage](#Usage)
-- [Syntax](#Syntax)
-    - [Variables](#Variables)
-    - [If Statements](#If-Statements)
-    - [While Loops](#While-Loops)
-    - [For Loops](#For-Loops)
-    - [Write a String with the Keyboard](#Write-a-String-with-the-Keyboard)
-    - [Sending a Single Keystroke](#Sending-a-Single-Keystroke)
-    - [Sending Key Combinations](#Sending-Key-Combinations)
-- [Types](#Types)
-- [Special Keys](#Special-Keys)
+- [Usage](#usage)
+- [Syntax](#syntax)
+    - [Variables](#variables)
+    - [If Statements](#if-statements)
+    - [While Loops](#while-loops)
+    - [For Loops](#for-loops)
+    - [Write a String with the Keyboard](#write-a-string-with-the-keyboard)
+    - [Sending a Single Keystroke](#sending-a-single-keystroke)
+    - [Sending Key Combinations](#sending-key-combinations)
+- [Types](#types)
+- [Special Keys](#special-keys)
 
 ## Usage
 Visit [the live version](https://willumz.github.io/keybscript) to use translate scripts to standard Arduino code for use with the `Keyboard.h` library.
@@ -109,7 +108,7 @@ And to open the run dialog (`WIN+r`):
 ```
 #press "GUI r";
 ```
-Some keys (like `CTRL` and `SHIFT`) have special names to use. Read about them in [key names](#Special-Keys).
+Some keys (like `CTRL` and `SHIFT`) have special names to use. Read about them in [key names](#special-keys).
 
 ## Types
 
