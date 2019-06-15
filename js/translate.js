@@ -1,5 +1,6 @@
 function translate()
 {
+    ErrorHandler.Reset();
     var input = document.getElementById("text-input").value;
     var lexed = lex(input);
     //var print = lexed.next().value;
@@ -28,5 +29,9 @@ function translate()
         temp.push(i);
     }
     sketch = temp.join("\n");
-    document.getElementById("text-compiled").value = sketch;
+    var out_box = document.getElementById("text-compiled");
+    out_box.style.color = "black";
+    out_box.value = sketch;
 }
+
+window.onerror = ErrorHandler.RaiseException;

@@ -131,4 +131,4 @@ For use with the `#press` statement, some keys have special names (as they canno
 - Right Arrow Key - `RIGHTARROW`
 - Windows (Command on Mac) Key - `GUI`
 
-See [Sending Key Combinations](#Sending-Key-Combinations) for more information on usage.
+See [Sending Key Combinations](#sending-key-combinations) for more information on usage.
