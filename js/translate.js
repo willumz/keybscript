@@ -1,4 +1,4 @@
-function translate()
+function translateInput()
 {
     ErrorHandler.Reset();
     var input = document.getElementById("text-input").value;
@@ -34,4 +34,4 @@ function translate()
     out_box.value = sketch;
 }
 
-//window.onerror = ErrorHandler.RaiseException;
+window.onerror = ErrorHandler.RaiseException;
