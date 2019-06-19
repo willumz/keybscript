@@ -78,6 +78,7 @@ class Parser
             {
                 var condition = this.nextExpression(null);
                 var body = this.nextExpression("#if");
+                if (!Array.isArray(body[0])) body = ["body", body];
                 console.log(`cond:${condition} bod:${body}`);
                 return this.nextExpression(["#if", condition, body]);
             }
@@ -85,6 +86,7 @@ class Parser
             {
                 var condition = this.nextExpression(null);
                 var body = this.nextExpression("#elseif");
+                if (!Array.isArray(body[0])) body = ["body", body];
                 console.log(`cond:${condition} bod:${body}`);
                 return this.nextExpression(["#elseif", condition, body]);
             }
@@ -96,6 +98,7 @@ class Parser
                 var args = this.nextExpression("#function");
                 this.tokens.getNext();
                 var body = this.nextExpression("#function");
+                if (!Array.isArray(body[0])) body = ["body", body];
                 //console.log(`n:${name} a:${args}`);
                 return this.nextExpression(["#function", name, returnType, args, body]);
             }
@@ -109,13 +112,15 @@ class Parser
             {
                 var condition = this.nextExpression(null);
                 var body = this.nextExpression("#while");
+                if (!Array.isArray(body[0])) body = ["body", body];
                 return this.nextExpression(["#while", condition, body]);
             }
 
             else if (value === "#for")
             {
-                var count = this.nextExpression(null);
+                var count = this.nextExpression(null, "", true);
                 var body = this.nextExpression("#for");
+                if (!Array.isArray(body[0])) body = ["body", body];
                 return this.nextExpression(["#for", count, body]);
             }
 

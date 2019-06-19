@@ -110,6 +110,19 @@ And to open the run dialog (`WIN+r`):
 ```
 Some keys (like `CTRL` and `SHIFT`) have special names to use. Read about them in [key names](#special-keys).
 
+### Adding a Delay
+`#delay` is used to add a delay to your script, and it merely accepts a number, which is how many milliseconds to wait.
+
+This example shows how to delay the program by 200ms:
+```
+#delay 200;
+```
+Note that, as with any statement or expression, variables can also be used. The following produces the same result as above:
+```
+d = 100;
+#delay d * 2;
+```
+
 ## Types
 
 - number:
