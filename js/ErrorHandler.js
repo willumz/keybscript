@@ -3,6 +3,7 @@ class ErrorHandler
 {
     static RaiseException(exception)
     {
+        wasError = true;
         var out_box = document.getElementById("text-compiled");
         out_box.style.color = "red";
         out_box.value += `${exception}\n\n`;

@@ -30,8 +30,13 @@ function translateInput()
     }
     sketch = temp.join("\n");
     var out_box = document.getElementById("text-compiled");
-    out_box.style.color = "black";
-    out_box.value = sketch;
+    if (!wasError)
+    {
+        out_box.style.color = "black";
+        out_box.value = sketch;
+    }
 }
+
+var wasError = false;
 
 window.onerror = ErrorHandler.RaiseException;

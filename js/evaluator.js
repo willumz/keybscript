@@ -69,7 +69,7 @@ class Evaluator
             }
             else if (valType === "string")
             {
-                if (op === "+" || op === "==") return [valType, `"${val1[1]}"${op}"${val2[1]}"`, "checked"];
+                if (op === "+" || op === "==") return [valType, `${val1[0] == "symbol" ? val1[1] : `"${val1[1]}"`}${op}${val2[0] == "symbol" ? val2[1] : `"${val2[1]}"`}`, "checked"];
                 else ErrorHandler.RaiseException("Strings can only be added (concatenated) together and compared (==)");
             }
             return null;
@@ -163,8 +163,10 @@ class Evaluator
         else if (type === "#print")
         {
             var string = this.getItem(item[1]);
-            if (string[0] !== "string") ErrorHandler.RaiseException("#print must be given a string");
-            this.skw.typeString(string[1]);
+            if (string[0] !== "string" && string[0] !== "symbol") ErrorHandler.RaiseException("#print must be given a string");
+            if (string[0] === "symbol" && this.skw.getVarType(string[1]) !== "string") ErrorHandler.RaiseException(`'${string[1]}' is not a string`);
+            console.log(string);
+            this.skw.typeString(string);
         }
         else if (type === "#press")
         {
@@ -272,7 +274,7 @@ class SketchWriter
 
     typeString(string)
     {
-        this.cursor.write(`\nKeyboard.print("${string}");`);
+        this.cursor.write(`\nKeyboard.print(${string[2] === "checked" || string[0] === "symbol" ? string[1] : `"${string[1]}"`});`);
     }
 
     pressKey(keys)

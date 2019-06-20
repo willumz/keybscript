@@ -15,6 +15,7 @@ A scripting language for keyboard input which aims to build some complexity upon
     - [Write a String with the Keyboard](#write-a-string-with-the-keyboard)
     - [Sending a Single Keystroke](#sending-a-single-keystroke)
     - [Sending Key Combinations](#sending-key-combinations)
+    - [Adding a Delay](#adding-a-delay)
 - [Types](#types)
 - [Special Keys](#special-keys)
 
